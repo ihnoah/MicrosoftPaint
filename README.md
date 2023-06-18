@@ -1,12 +1,11 @@
 Họ tên: Huỳnh Hạo Nhị
 Email: haonhi.data@gmail.com
-SĐT: 0375093544
 
 # Đề tài: Xây dựng ứng dụng website tương tự như Microsoft Paint
 
-- Chạy website với địa chỉ: http://127.0.0.1:5500/
+- Chạy website bằng lệnh: start index.html
 - Công nghệ sử dụng: HTMT, CSS, JavaScipt
-- Tính năng của website
+- Tính năng của website:
   - Save: lưu hình vẽ
   - Clear: xóa tất cả hình vẽ trên bảng
   - Brush, Eracer
