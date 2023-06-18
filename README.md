@@ -2,7 +2,7 @@ Họ tên: Huỳnh Hạo Nhị
 Email: haonhi.data@gmail.com
 
 # Đề tài: Xây dựng ứng dụng website tương tự như Microsoft Paint
-
+![website](https://github.com/ihnoah/MicrosoftPaint/assets/105194936/57e4a307-2837-447a-a70a-e319c244834c)
 - Chạy website bằng lệnh: start index.html
 - Công nghệ sử dụng: HTMT, CSS, JavaScipt
 - Tính năng của website:
