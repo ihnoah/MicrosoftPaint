@@ -1,0 +1,255 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #edeef0;
+}
+.container {
+  width: 100%;
+  gap: 10px;
+  padding: 10px;
+  max-width: 1050px;
+}
+section {
+  background: #fff;
+  border-radius: 7px;
+}
+
+.space {
+  width: 100%;
+  height: 15px;
+}
+
+/* CSS Tools board */
+.tools-board {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 0.2px solid #d8d8d8;
+  height: 150px;
+}
+.tools-board .row {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 15px;
+  border-right: 0.2px solid #d8d8d8;
+  position: relative;
+}
+.tools-board .row:last-child {
+  border-right: none;
+}
+.title {
+  font-size: 10px;
+  color: gray;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tools-board .row .options {
+  list-style: none;
+  margin: 10px 0 0 0;
+  align-items: center;
+}
+.row .options .option {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.option.active {
+  box-shadow: 0 0 0 1px #979797;
+  padding: 1px;
+  width: 27px;
+  height: 27px;
+  border-radius: 2px;
+}
+.option :where(span, label) {
+  color: #5a6168;
+  cursor: pointer;
+  padding-left: 10px;
+}
+.option:is(:hover, .active) :where(span, label) {
+  color: #4a98f7;
+}
+.option #size-slider {
+  width: 100%;
+  height: 20px;
+  margin-top: 24px;
+}
+/* End CSS Tools board */
+
+/* CSS Buttons */
+.buttons .save-img {
+  background: #4a98f7;
+  border: 1px solid #4a98f7;
+}
+.buttons .clear-canvas {
+  color: #6c757d;
+  border: 1px solid #6c757d;
+  transition: all 0.3s ease;
+  margin-top: 11px;
+}
+.clear-canvas:hover {
+  color: #fff;
+  background: #6c757d;
+}
+.line {
+  border-top: 0.2px solid #d8d8d8;
+}
+.buttons button {
+  width: 100%;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 11px 0;
+  font-size: 0.9rem;
+  margin-bottom: 13px;
+  background: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.tools-board .buttons {
+  width: 110px;
+}
+/* End CSS Buttons */
+
+/* CSS Tools */
+.option #fill-color {
+  cursor: pointer;
+  height: 14px;
+  width: 14px;
+}
+.tools-board .row .tools {
+  align-self: center;
+  width: 95px;
+}
+/* End CSS Tools */
+
+/* CSS Shapes*/
+.row .shapes {
+  padding-top: 22px;
+  display: flex;
+  gap: 20px;
+  border-radius: 4px;
+}
+.row .shapes .img {
+  width: 25px;
+  height: 25px;
+}
+/* End CSS Shapes */
+
+/* CSS Size */
+.size {
+  width: 120px;
+}
+/* End CSS Size */
+
+/* CSS Corlor */
+.colors {
+  width: 170px;
+  border-right: none;
+}
+.colors .options {
+  display: grid;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.colors .option {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  position: relative;
+}
+.colors .option:nth-child(1) {
+  background-color: black;
+  border: 1px solid gray;
+}
+.colors .option:nth-child(2) {
+  background-color: white;
+  border: 1px solid gray;
+}
+.colors .option:nth-child(3) {
+  background-color: gray;
+  border: 1px solid gray;
+}
+.colors .option:nth-child(4) {
+  background-color: #4a98f7;
+  border: 1px solid gray;
+}
+.colors .option:nth-child(5) {
+  background-color: red;
+  border: 1px solid gray;
+}
+.colors .option:nth-child(6) {
+  background-color: brown;
+  border: 1px solid gray;
+}
+.colors .option:nth-child(7) {
+  background-color: yellow;
+  border: 1px solid gray;
+}
+.colors .option:nth-child(8) {
+  background-color: pink;
+  border: 1px solid gray;
+}
+.colors .option:nth-child(9) {
+  background-color: lightgreen;
+  border: 1px solid gray;
+}
+.colors .option:nth-child(10) {
+  background-color: lightblue;
+  border: 1px solid gray;
+}
+.colors .option:nth-child(11) {
+  background: linear-gradient(to bottom right, red, rgb(104, 235, 104), blue);
+  align-self: flex-start;
+  grid-row: 3;
+  grid-column: 1 / span 5;
+  height: 25px;
+  width: 25px;
+  justify-self: center;
+}
+.colors .option.selected::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  height: 25px;
+  width: 25px;
+  background: inherit;
+  border-radius: inherit;
+  border: 1px solid #000000;
+  transform: translate(-50%, -50%);
+}
+.colors .option:first-child.selected::before {
+  border-color: #ccc;
+}
+.option #color-picker {
+  opacity: 0;
+  cursor: pointer;
+}
+/* End CSS Color */
+
+/* CSS Canvas */
+.drawing-board {
+  flex: 1;
+  overflow: hidden;
+}
+.drawing-board canvas {
+  width: 100%;
+  height: 515px;
+  border: 0.2px solid #d8d8d8;
+}
+/* End CSS Canvas */
